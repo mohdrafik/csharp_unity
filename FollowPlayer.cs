@@ -5,7 +5,8 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
 
-    public GameObject player;
+    public GameObject Player;
+    private Vector3 offset = new Vector3(0, 6, -6);
     // Start is called before the first frame update
     void Start()
     {
@@ -13,16 +14,20 @@ public class FollowPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        transform.position = player.transform.position + new Vector3((float)(-0.2), (float)(5.78), (float)(-5.96));
-        /* here player.transform.position --> vehicle.transform.position 
+       
+        transform.position = Player.transform.position + offset;
+        
+        /* 
+         here player.transform.position --> vehicle.transform.position 
          because in the componant of the main camera we defined the player --> vehicle. player sit in vehicle.
-        so vehicle position + shift (vector3(-0.20,5.78,-5.96))--> this should be the camera position.
-          
-         
-         
+         so vehicle position + shift (vector3(-0.20,5.78,-5.96))--> this should be the camera position.
+                         
          */
+
+
+
     }
 }
 
