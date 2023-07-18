@@ -18,7 +18,7 @@ public class FollowPlayer : MonoBehaviour
     {
        
         transform.position = Player.transform.position + offset;
-        
+        //this is for the offset of the camera
         /* 
          here player.transform.position --> vehicle.transform.position 
          because in the componant of the main camera we defined the player --> vehicle. player sit in vehicle.
